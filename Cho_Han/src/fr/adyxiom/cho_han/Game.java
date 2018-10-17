@@ -22,7 +22,7 @@ public class Game {
                 Boolean player2Cho = false;
                 Boolean player1Stats;
                 System.out.println(player1.getName() + "'s turn");
-                System.out.println("Cho(1) | Han(2) | Statistics(0)");
+                System.out.println("Cho(1) | Han(2) | Leaderboard(3) | Statistics(0)");
                 try {
                     switch (scanner.nextInt()) {
                         case 1:
@@ -107,6 +107,10 @@ public class Game {
                                 cancel();
                                 break;
                             }
+                            cancel();
+                            break;
+                        case 3:
+                            new Leaderboard(player1, player2, nPlayer);
                             cancel();
                             break;
                         case 0:
