@@ -3,8 +3,8 @@ package fr.adyxiom.cho_han;
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 
-public class stats {
-    public stats(Player player1, Player player2, Boolean player1Stats) {
+public class Stats {
+    public Stats(Player player1, Player player2, Boolean player1Stats) {
         if (player1Stats) {
             try {
                 double vS = player1.getvStats();
@@ -20,7 +20,7 @@ public class stats {
                 System.out.println("Maximum of defeats in a row : " + player1.getMaxJ());
                 System.out.println("You have " + df.format(winRate) + "% winrate.");
                 System.out.println("-------------------------------------------------------------------");
-                //new game(player1, player2);
+                //new Game(player1, player2);
             } catch (ArithmeticException | InputMismatchException e) {
                 System.out.println("Wrong input");
             }
@@ -40,7 +40,7 @@ public class stats {
                 System.out.println("Maximum of defeats in a row : " + player2.getMaxJ());
                 System.out.println("You have " + df.format(winRate) + "% winrate.");
                 System.out.println("-------------------------------------------------------------------");
-                //new game(player1, player2);
+                //new Game(player1, player2);
             } catch (ArithmeticException | InputMismatchException e) {
                 System.out.println("Wrong input");
             }
